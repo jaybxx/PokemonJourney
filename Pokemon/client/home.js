@@ -1,17 +1,11 @@
-const form = document.getElementById('myForm');
+const getPokemonBtn = document.querySelector("#getPokemon")
 
-form.addEventListener('submit', function(event) {
-
-  event.preventDefault();
-
+const showRegion = () => {
+  axois.get("http://localhost:4000/api/information/")
+    .then(res => {
+        const data = res.data
+        alert(data)
+    });
+};
  
-
-  const input = document.getElementById('myInput');
-
-  const text = input.value;
-
- 
-
-  alert(`Hi ${text}`);
-
-});
+getPokemonBtn.addEventListener('click', showRegion)
